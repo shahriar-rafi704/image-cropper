@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url('crop.png'); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center center; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  width: min(90%, 850px);
+  position: absolute;
+  transform: translateX(-50%);
+  top: 20%;
+  left: 50%;
+  background-color: #3399c2;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  border-radius: 7px;
+}
+.container .image-container,
+.container .preview-container {
+  width: 100%;
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  display: block;
+  position: relative;
+  background-color: #ad0606;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  width: 250px;
+  padding: 16px 0;
+  border-radius: 0.3em;
+  margin: 16px auto;
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.image-container {
+  width: 60%;
+  margin: 0 auto;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+input[type="number"] {
+  width: 100px;
+  padding: 16px 5px;
+  border-radius: 0.3em;
+  border: 2px solid #000000;
+}
+button {
+  padding: 1em;
+  border-radius: 0.3em;
+  border: 2px solid #021129;
+  background-color: #ffffff;
+  color: #025bee;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+.btns button {
+  font-size: 1em;
+}
+.btns a {
+  border: 2px solid #03193d;
+  background-color: #031c46;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.3em;
+}
+.hide {
+  display: none;
+}
+
+
+.rotate-handle {
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.rotate-handle::before {
+  content: "↻";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
